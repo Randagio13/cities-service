@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/Randagio13/cities-service/compare/v1.1.0...v1.1.1) (2022-03-22)
+
+
+### Bug Fixes
+
+* `package.json` attributes ([7604c00](https://github.com/Randagio13/cities-service/commit/7604c000a5cbb8a97eadce6db96de8ab7136fea0))
+
 # [1.1.0](https://github.com/Randagio13/cities-service/compare/v1.0.0...v1.1.0) (2022-03-22)
 
 

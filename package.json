@@ -1,7 +1,7 @@
 {
   "name": "@ac-dev/cities-service",
   "author": "Alessandro Casazza",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Get the World's cities",
   "repository": "https://github.com/Randagio13/cities-service.git",
   "license": "MIT",
