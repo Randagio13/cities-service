@@ -24,16 +24,14 @@
   "scripts": {
     "alias": "npx tsc-alias",
     "start": "tsc --watch",
-    "build": "tsc -b tsconfig.json --verbose --force && cp -R data lib",
-    "postbuild": "minimize-js lib && npm run minify-json",
-    "minify-json": "minify-json ./lib/data -w -s",
+    "build": "npm run lint && tsc -b tsconfig.json tsconfig.cjs.json --verbose --force && cp -R data lib",
+    "postbuild": "minimize-js lib -w -s -d && npm run minify-json",
+    "minify-json": "minify-json ./lib/data",
     "test": "jest",
     "coverage": "jest --coverage",
     "prepare": "npm run build",
-    "size": "size-limit",
-    "analyze": "size-limit --why",
     "semantic-release": "semantic-release",
-    "publish:beta": ""
+    "lint": "eslint src"
   },
   "publishConfig": {
     "access": "public"
@@ -92,15 +90,18 @@
     "@semantic-release/commit-analyzer": "^9.0.2",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^8.0.2",
-    "@semantic-release/npm": "^9.0.0",
+    "@semantic-release/npm": "^9.0.1",
     "@semantic-release/release-notes-generator": "^10.0.3",
-    "@types/jest": "^27.4.0",
+    "@types/jest": "^27.4.1",
+    "@typescript-eslint/eslint-plugin": "^5.16.0",
+    "@typescript-eslint/parser": "^5.16.0",
+    "eslint": "^8.11.0",
     "husky": "^7.0.4",
-    "jest": "^27.4.7",
+    "jest": "^27.5.1",
     "minify-json": "^1.0.0",
-    "minimize-js": "^1.2.0",
+    "minimize-js": "^1.3.0",
     "semantic-release": "^19.0.2",
     "tslib": "^2.3.1",
-    "typescript": "^4.5.5"
+    "typescript": "^4.6.2"
   }
 }
