@@ -5,8 +5,9 @@
   "description": "Get the World's cities",
   "repository": "https://github.com/Randagio13/cities-service.git",
   "license": "MIT",
-  "module": "lib/index.js",
-  "typings": "lib/index.d.ts",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "typings": "lib/esm/index.d.ts",
   "keywords": [
     "world",
     "countries",
